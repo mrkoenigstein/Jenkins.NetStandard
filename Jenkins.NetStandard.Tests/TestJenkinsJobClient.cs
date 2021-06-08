@@ -37,5 +37,16 @@ namespace Jenkins.NetStandard.Tests
             buildWithParameter.Should().NotBeNull();
             buildWithParameter.QueueItemNumber.Should().NotBeNull();
         }
+
+
+        [TestMethod]
+        public void TestGetQueueInfo()
+        {
+            var build = JenkinsClient.BuildClient.Build(JobName);
+            build.Should().NotBeNull();
+            build.QueueItemNumber.Should().NotBeNull();
+            var queueItemInfo = JenkinsClient.QueueClient.GetQueueItemInfo(build.QueueItemNumber);
+            queueItemInfo.Should().NotBeNull();
+        }
     }
 }

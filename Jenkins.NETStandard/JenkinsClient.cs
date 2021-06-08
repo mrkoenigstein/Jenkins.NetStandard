@@ -17,6 +17,8 @@ namespace Jenkins.NETStandard
 
         private BuildClient _buildClient;
         
+        private QueueClient _queueClient;
+
         public JenkinsClient(Uri baseUrl, string userName, string apiToken)
         {
             BaseUri = baseUrl;
@@ -31,5 +33,7 @@ namespace Jenkins.NETStandard
         
         public JobsClient JobsClient => _jobsClient ??= new JobsClient(this);
         public BuildClient BuildClient => _buildClient ??= new BuildClient(this);
+
+        public QueueClient QueueClient => _queueClient ??= new QueueClient(this);
     }
 }

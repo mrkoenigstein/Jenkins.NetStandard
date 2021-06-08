@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
         <PackageId>Jenkins.NetStandard</PackageId>
         <Version>0.0.1</Version>
         <Authors>Christian Schulze (cschulc@outlook.com)</Authors>
@@ -9,6 +8,9 @@
         <LangVersion>latest</LangVersion>
         <OutputType>Library</OutputType>
         <IsPackable>true</IsPackable>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <TargetFrameworks>net5.0;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>

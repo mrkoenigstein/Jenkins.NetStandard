@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
-using System.Text.Json;
 using Jenkins.NETStandard.Core.Domain;
 using Jenkins.NETStandard.Core.Util;
 
