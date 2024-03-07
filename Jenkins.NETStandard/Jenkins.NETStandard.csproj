@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>Jenkins.NetStandard</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>Christian Schulze (cschulc@outlook.com)</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>latest</LangVersion>
@@ -10,11 +10,11 @@
         <IsPackable>true</IsPackable>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <TargetFrameworks>net5.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="System.Text.Json" Version="5.0.0" />
+      <PackageReference Include="System.Text.Json" Version="6.0.9" />
     </ItemGroup>
 
     <ItemGroup>

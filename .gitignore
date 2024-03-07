@@ -5,3 +5,4 @@
 /TestResults/
 /Jenkins.NetStandard.Tests/obj/
 /Jenkins.NetStandard.Tests/bin/
+/Jenkins.NetStandard.Tests/jenkins/jenkins_home

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
     </PropertyGroup>
@@ -16,6 +16,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Jenkins.NETStandard\Jenkins.NETStandard.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="jenkins\jenkins_home\" />
     </ItemGroup>
 
 </Project>

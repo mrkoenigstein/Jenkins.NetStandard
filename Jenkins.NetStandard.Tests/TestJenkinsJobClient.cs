@@ -24,7 +24,7 @@ namespace Jenkins.NetStandard.Tests
         [TestMethod]
         public void TestBuild()
         {
-            var build = JenkinsClient.BuildClient.Build(JobName);
+            var build = JenkinsClient.BuildClient.Build(JobPath, JobName);
             build.Should().NotBeNull();
             build.QueueItemNumber.Should().NotBeNull();
         }
@@ -32,8 +32,13 @@ namespace Jenkins.NetStandard.Tests
         [TestMethod]
         public void TestBuildWithParameters()
         {
-            var parameter = new Dictionary<string, string> {{"param", "test"}};
-            var buildWithParameter = JenkinsClient.BuildClient.BuildWithParameter(JobName, parameter);
+            var parameter = new Dictionary<string, string>
+            {
+                { "A", "foo" },
+                { "B", "bar" },
+                { "C", "true" }
+            };
+            var buildWithParameter = JenkinsClient.BuildClient.BuildWithParameter(JobPath,JobNameWithParams, parameter);
             buildWithParameter.Should().NotBeNull();
             buildWithParameter.QueueItemNumber.Should().NotBeNull();
         }
@@ -42,7 +47,7 @@ namespace Jenkins.NetStandard.Tests
         [TestMethod]
         public void TestGetQueueInfo()
         {
-            var build = JenkinsClient.BuildClient.Build(JobName);
+            var build = JenkinsClient.BuildClient.Build(JobPath,JobName);
             build.Should().NotBeNull();
             build.QueueItemNumber.Should().NotBeNull();
             var queueItemInfo = JenkinsClient.QueueClient.GetQueueItemInfo(build.QueueItemNumber);
